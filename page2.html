@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Delivery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Quicksand',sans-serif;
+
+    background:
+    linear-gradient(45deg,#ffd6e7 25%,transparent 25%),
+    linear-gradient(-45deg,#ffd6e7 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#ffd6e7 75%),
+    linear-gradient(-45deg,transparent 75%,#ffd6e7 75%);
+    background-size:80px 80px;
+    background-position:0 0,0 40px,40px -40px,-40px 0;
+    background-color:#ffeaf2;
+}
+
+.container{
+    text-align:center;
+}
+
+.badge{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:white;
+    border:6px solid #222;
+    position:relative;
+    margin:auto;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    animation:float 3s ease-in-out infinite;
+}
+
+.top-text{
+    position:absolute;
+    top:28px;
+    width:100%;
+    text-align:center;
+    font-weight:700;
+    font-size:22px;
+    color:#f3a4b8;
+    letter-spacing:2px;
+}
+
+.bottom-text{
+    position:absolute;
+    bottom:28px;
+    width:100%;
+    text-align:center;
+    font-weight:700;
+    font-size:20px;
+    color:#f3a4b8;
+}
+
+.flower-left,
+.flower-right{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:26px;
+}
+
+.flower-left{
+    left:22px;
+}
+
+.flower-right{
+    right:22px;
+}
+
+.box-wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-45%);
+}
+
+/* parcel box */
+
+.box{
+    width:120px;
+    height:95px;
+    position:relative;
+}
+
+.front{
+    width:120px;
+    height:95px;
+    background:#e8d7df;
+    border:2px solid #555;
+    position:absolute;
+}
+
+.side{
+    width:35px;
+    height:95px;
+    background:#d8c0ca;
+    border:2px solid #555;
+    position:absolute;
+    right:-35px;
+    transform:skewY(-35deg);
+    transform-origin:left;
+}
+
+.top{
+    width:120px;
+    height:35px;
+    background:#f6e8ee;
+    border:2px solid #555;
+    position:absolute;
+    top:-35px;
+    transform:skewX(-55deg);
+    transform-origin:bottom;
+}
+
+.tape{
+    position:absolute;
+    width:30px;
+    height:130px;
+    background:#222;
+    left:45px;
+    top:-35px;
+    transform:rotate(10deg);
+}
+
+.label{
+    width:28px;
+    height:18px;
+    background:white;
+    border:1px solid #555;
+    position:absolute;
+    right:10px;
+    top:25px;
+}
+
+.arrow{
+    position:absolute;
+    bottom:8px;
+    left:12px;
+    font-size:14px;
+}
+
+.next-btn{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    color:#222;
+    font-family:'Caveat',cursive;
+    font-size:34px;
+    transition:.3s;
+}
+
+.next-btn:hover{
+    transform:translateX(8px);
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="badge">
+
+        <div class="top-text">
+            SPECIAL DELIVERY
+        </div>
+
+        <div class="flower-left">✿</div>
+        <div class="flower-right">✿</div>
+
+        <div class="box-wrapper">
+            <div class="box">
+
+                <div class="top"></div>
+
+                <div class="front">
+                    <div class="label"></div>
+                    <div class="arrow">↑</div>
+                </div>
+
+                <div class="side"></div>
+
+                <div class="tape"></div>
+
+            </div>
+        </div>
+
+        <div class="bottom-text">
+            JUST FOR YOU
+        </div>
+
+    </div>
+
+    <a href="page3.html" class="next-btn">
+        next >>
+    </a>
+
+</div>
+
+</body>
+</html>
